@@ -1,12 +1,12 @@
 %-------------------------
 % Resume in Latex
-% Author : Jake Gutierrez
+% Author : Firdaus Zulkifli
 % Based off of: https://github.com/sb2nov/resume
-% License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
-
+\documentclass[a4paper,12pt]{article}
+%\usepackage[T1]{fontenc}
+%\usepackage{mathptmx} % Times New Roman
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -18,28 +18,15 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{graphicx}
 \input{glyphtounicode}
 
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -52,167 +39,136 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
-
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{\vspace{-2pt}\item\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}\textbf{#1} & #2 \\\textit{\small#3} & \textit{\small #4} \\\end{tabular*}\vspace{-7pt}}
+\newcommand{\resumeSubSubheading}[2]{\item\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}\textit{\small#1} & \textit{\small #2} \\\end{tabular*}\vspace{-7pt}}
+\newcommand{\resumeProjectHeading}[2]{\item\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}\small#1 & #2 \\\end{tabular*}\vspace{-7pt}}
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \begin{document}
 
-%----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
+\noindent % Added to remove extra space at the beginning
+\begin{minipage}{\textwidth} % Use minipage to control horizontal alignment
+    \begin{minipage}{0.7\textwidth} % Left side for text
+        \begin{flushleft}
+            \textbf{\Huge \scshape Firdaus Zulkifli} \\ \vspace{1pt}
+            \small Senior Software Engineer (Embedded) $|$ +60134564785 $|$ \href{mailto:firdausbzulkifli@gmail.com}{\underline{firdausbzulkifli@gmail.com}} $|$
+            \href{https://linkedin.com/in/firdauszulkifli}{\underline{linkedin.com/in/firdauszulkifli}} $|$
+            \href{https://github.com/firdaus-zulkifli}{\underline{github.com/firdaus-zulkifli}}
+      ~  \end{flushleft}
+    \end{minipage}%
+    \begin{minipage}{0.3\textwidth} % Right side for image
+        \begin{flushright}
+            \makebox[0.7\textwidth]{
+                \includegraphics[width=0.4\textwidth]{dp.jpg} % Image fills the box
+            }
+        \end{flushright}
+    \end{minipage}
+\end{minipage}
 
-\begin{center}
-    \textbf{\Huge \scshape Jake Ryan} \\ \vspace{1pt}
-    \small 123-456-7890 $|$ \href{mailto:x@x.com}{\underline{jake@su.edu}} $|$ 
-    \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/jake}} $|$
-    \href{https://github.com/...}{\underline{github.com/jake}}
-\end{center}
+\section{Executive Summary}
+\vspace{3pt}
+ \small Driven Software Engineer with almost nine years of embedded systems experience, focused on delivering impactful and efficient solutions. Possessing strong C++ and HMI skills, I am seeking a challenging role in a dynamic environment, including opportunities in cybersecurity, to further enhance my expertise and contribute to organizational and community success.
 
-
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Southwestern University}{Georgetown, TX}
-      {Bachelor of Arts in Computer Science, Minor in Business}{Aug. 2018 -- May 2021}
-    \resumeSubheading
-      {Blinn College}{Bryan, TX}
-      {Associate's in Liberal Arts}{Aug. 2014 -- May 2018}
-  \resumeSubHeadingListEnd
-
-
-%-----------EXPERIENCE-----------
 \section{Experience}
+\vspace{3pt}
   \resumeSubHeadingListStart
-
-    \resumeSubheading
-      {Undergraduate Research Assistant}{June 2020 -- Present}
-      {Texas A\&M University}{College Station, TX}
+    \resumeSubheading{Senior Software Engineer}{Aug 2022 -- Present}{Motorola Solutions Sdn. Bhd.}{Bayan Lepas, Penang}
       \resumeItemListStart
-        \resumeItem{Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems}
-        \resumeItem{Developed a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data}
-        \resumeItem{Explored ways to visualize GitHub collaboration in a classroom setting}
+        \resumeItem{Developed and maintained mission-critical TETRA communication software, ensuring high reliability and robustness for public safety applications. Mostly involved with C and C++.}
+        \resumeItem{Analyzed and resolved customer-reported defects, within the stipulated timeframe and defined SLAs.}
+        \resumeItem{Presented detailed defect analysis and status reports to stakeholders and development teams, improving communication efficiency.}
+        \resumeItem{Enhanced proprietary software to facilitate GPS simulation capabilities, resulting in an increased number of test cases that could be performed within a single software.}
+        \resumeItem{Engineered an Ethernet-to-Ethernet communication port for On-Board Communication (OBC) systems for high speed rail, replacing legacy serial-to-serial solution, that significantly improved network connectivity and data transfer rates.}
+        \resumeItem{Implemented a Rust-based OBC simulator to rigorously test the Ethernet communication port, improving the reliability and performance of On-Board Communication systems.}
+        \resumeItem{Diagnosed and resolved critical defects within train radio communication systems for public transport operators (mass rapid transit, high-speed rail, buses, etc), ensuring uninterrupted communication and passenger safety.}
+        \resumeItem{Facilitated monthly technical briefings for TETRA engineers, detailing resolved customer defects, fostering a culture of continuous learning.}
       \resumeItemListEnd
-      
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
-
-    \resumeSubheading
-      {Information Technology Support Specialist}{Sep. 2018 -- Present}
-      {Southwestern University}{Georgetown, TX}
+    \vspace{3pt}
+    \resumeSubheading{Regular Software Developer}{Aug 2019 -- July 2022}{Luxoft Malaysia Sdn. Bhd.}{Georgetown, Penang}
       \resumeItemListStart
-        \resumeItem{Communicate with managers to set up campus computers used on campus}
-        \resumeItem{Assess and troubleshoot computer problems brought by students, faculty and staff}
-        \resumeItem{Maintain upkeep of computers, classroom equipment, and 200 printers across campus}
-    \resumeItemListEnd
-
-    \resumeSubheading
-      {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
-      {Southwestern University}{Georgetown, TX}
-      \resumeItemListStart
-        \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
-        \resumeItem{Developed a game in Java to test the generated dungeons}
-        \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
-        \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
-        \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
-        \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
+        \resumeItem{Develop and maintain In-Vehicle Infotainment (IVI) solutions.}
+        \resumeItem{Collaborate with the radio team on the partner side and act as an essential team member for HMI development in the radio domain.}
+        \resumeItem{Acted as component owner for HMI repository, responsible for the code review approvals}
+        \resumeItem{Liaise with the design team for scalable design development using a style guide document.}
+        \resumeItem{Work closely on-site with customers to ensure efficient teamwork.}
+        \resumeItem{Guide and mentor newcomers in HMI domain.}
       \resumeItemListEnd
-
+    \vspace{3pt}
+    \resumeSubheading{Junior Software Developer}{June 2017 -- July 2019}{Luxoft Malaysia Sdn. Bhd.}{Georgetown, Penang}
+      \resumeItemListStart
+        \resumeItem{Converted UI designs to workable and scalable code solutions as an HMI developer.}
+        \resumeItem{Collaborated with the Populus (HMI framework) programming team for rectifying proprietary software bugs.}
+        \resumeItem{Involved in front-end (HMI) and middleware (C++) development.}
+        \resumeItem{Created Bash scripts to automate repetitive tasks.}
+        \resumeItem{Practiced Agile methodologies throughout projects and performed unit testing using Google Test and Google Mock.}
+      \resumeItemListEnd
+    \vspace{3pt}
+    \resumeSubheading{Programmer Trainee}{Jan 2017 -- May 2017}{Luxoft Malaysia Sdn. Bhd.}{Georgetown, Penang}
+      \resumeItemListStart
+        \resumeItem{Successfully completed Luxoft's ``Automotive Software University'', demonstrating commitment to continuous learning and advanced automotive software development practices, including effective team communication.}
+        \resumeItem{Proactively expanded technical skillset by mastering C++ and solidifying Object-Oriented Programming paradigms, transitioning from Java-centric development.}
+      \resumeItemListEnd
+    \vspace{3pt}
+    \resumeSubheading{Software Engineer}{Sept 2016 -- Dec 2016}{Integrated Business Machine Inc. (M) Sdn. Bhd.}{Kuala Lumpur}
+      \resumeItemListStart
+        \resumeItem{Supporting existing integration applications by enhancing its features. Written in Java}
+        \resumeItem{Liaising with intelligent users during disaster recovery activities; act as backup for IBM Software configuration.}
+        \resumeItem{Preparing documentation for system testing, software changelogs, installation and configuration tutorials.}
+        \resumeItem{Performed product expert testing, including system unit testing, system integration testing, and user acceptance testing.}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
+\section{Education}
+\vspace{3pt}
+  \resumeSubHeadingListStart
+    \resumeSubheading{University of Nottingham}{Malaysia \& UK}{BSc (Hons) Computer Science with Artificial Intelligence}{July 2012 -- July 2016}
+  \resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
-          \resumeItemListStart
-            \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
-            \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
-            \resumeItem{Visualized GitHub data to show collaboration}
-            \resumeItem{Used Celery and Redis for asynchronous tasks}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
-          \resumeItemListStart
-            \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
-            \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
-            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
-            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+\section{Certifications \& Achievement}
+\vspace{3pt}
+\begin{itemize}[leftmargin=*, itemsep=2pt, parsep=2pt] % Reduced spacing
+    \item AWS Certified Cloud Practitioner \href{https://www.credly.com/badges/225a84d5-6042-4071-9312-dc2a602fae62/linked_in_profile}{[Credly Badge]} \\
+          Expiry Date: Feb 2028
+    \item Certified Ethical Hacker (CEH) \\
+          Credential ID ECC4150386927 \\
+          Expiry Date: Feb 2026
+    \item Nottingham Advantage Award 15/16
+    \item Dean's Excellence Scholarship Award 13/14
+    \item Obtained score of 7.5 out of 9 in the International English Language Testing System
+\end{itemize}
 
 
-
-%
-%-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
+\vspace{3pt}
+  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R} \\
-     \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
-     \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
-     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+      \textbf{Languages}{: C/C++, Rust, HTML/CSS, PHP, Lua, Bash Scripting} \\
+      \textbf{Frameworks}{: Yocto, Laravel, Bootstrap} \\
+      \textbf{Testing/Build}{: GoogleTest, cppcheck, CMake, Jenkins} \\
+      \textbf{Platforms/Tools}{: Git, Jira, Docker, Amazon Web Services, Linux and systemd} \\
     }}
- \end{itemize}
+  \end{itemize}
 
+\section{Community Engagement}
+\vspace{3pt}
+\begin{itemize}
+    \item Mentored a high school team in the \textbf{First Tech Challenge (FTC)} 2023/2024, a premier robotics competition organized by Penang Science Cluster, for a 7-month period.
+\end{itemize}
 
-%-------------------------------------------
+\section{Reference}
+  \begin{itemize}
+    \item Mohd Ridzuan Bistami Mohd Zainon \\
+          Architect, Motorola Solutions Malaysia Sdn. Bhd. \\
+          +60194522655
+  \end{itemize}
 \end{document}
